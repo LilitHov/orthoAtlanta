@@ -1301,7 +1301,7 @@
 
         }
         .sidebar{
-            min-width: 197px;
+            min-width: 197px !important;
         }
         .text-right{
             text-align: right !important;
@@ -1345,16 +1345,38 @@
         }
 
         /* Small only  media-query*/
-        @media screen and (max-width: 320px) {
+        @media (min-width: 170px) and (max-width: 420px) {
 
-            .reverse-elem {
-                display: flex;
-                flex-direction: column-reverse;
+            .order-box {
+                display: grid !important;
+                flex-direction: row;
             }
+            .order-box :nth-child(1) { order: 2; }
+            .order-box :nth-child(2) { order: 1; }
+            .order-box :nth-child(3) { order: 3; }
+            .order-box :nth-child(4) { order: 4; }
+            .order-box :nth-child(5) { order: 5; }
 
-            .ortho-atlanta-pic {
-                height: 150px !important;
-                margin-bottom: 50px;
+            .news-item-pic{
+                width: 100% !important;
+                height: 200px !important;
+                margin-right: 0 !important;
+                margin-bottom: 4% !important;
+            }
+            .ortho-atlanta-pic{
+                margin-bottom: 5% !important;
+            }
+            .news-item-paragraph{
+                width: 100% !important;
+                font-size: 16px !important;
+                margin-bottom: 5% !important;
+            }
+            .news-items-header{
+                font-size: 16px !important;
+                margin-bottom: 4% !important;
+            }
+            .news-item-link{
+                font-size: 16px !important;
             }
 
             .date td {
@@ -1363,7 +1385,6 @@
                 line-height: 55px !important;
                 padding: 0 17px !important;
             }
-
             .bbt-atlanta-open-tennis tr {
                 background: #f2f2f2;
             }
@@ -1371,39 +1392,45 @@
             .bbt-atlanta-open-tennis h5 {
                 margin-top: 35px !important;
             }
+            .open-tennis-pic{
+                width: 100% !important;
+                height: 150px !important;
+            }
 
             .news-item img {
                 width: 100% !important;
             }
 
-            .tennis-players-web {
-                display: none;
-            }
-
-            .tennis-players-mobile {
-                display: block !important;
-                width: 100% !important;
-                margin-bottom: 10px;
-            }
             .quick-links-list  p {
                 font-size: 11px;
             }
-
+            .news-block{
+                padding-left: 11%;
+            }
+            .footer-black{
+                margin-top: 4%;
+            }
+            .reverse-elem {
+                display: flex;
+                flex-direction: column-reverse;
+            }
         }
 
-        @media (min-width: 321px) and (max-width: 600px) {
+        @media (min-width: 421px) and (max-width: 600px) {
 
             .reverse-elem {
                 display: flex;
                 flex-direction: column-reverse;
             }
-
+            .ortho-atlanta-pic{
+                margin-bottom: 5% !important;
+            }
             .todays-feauter-header {
                 padding: 17px 0 17px 37px !important;
             }
 
             .padding-35 {
-                padding: 0 35px !important;
+                padding: 0 0 0 35px !important;
             }
 
             .padding-n {
@@ -1413,7 +1440,10 @@
             .ortho-atlanta-pic {
                 margin-bottom: 50px;
             }
-
+            .bbt-atlanta-open-tennis{
+                margin-bottom: 0 !important;
+                padding-bottom: 2% !important;
+            }
             .bbt-atlanta-open-tennis tr {
                 background: #f2f2f2;
             }
@@ -1421,31 +1451,55 @@
             .bbt-atlanta-open-tennis h5 {
                 margin-top: 35px !important;
             }
-
-            .tennis-players-web {
-                display: none;
-            }
-
-            .tennis-players-mobile {
-                display: block !important;
+            .open-tennis-pic{
                 width: 100% !important;
-                margin-bottom: 10px;
+                height: 150px !important;
+
+            }
+            .order-box {
+                display: grid !important;
+                flex-direction: row;
+            }
+            .order-box-first { order: 1; }
+            .order-box-second { order: 2; }
+            .order-box-third { order: 3; }
+            .order-box-fourth{ order: 4; }
+            .order-box-fifth { order: 5; }
+            .news-block{
+                padding-left: 11%;
+            }
+            .news-item-pic{
+                width: 100% !important;
+                height: 200px !important;
+                margin-right: 0 !important;
+                margin-bottom: 4% !important;
+            }
+            .news-item-paragraph{
+                width: 100% !important;
+                font-size: 16px !important;
+                margin-bottom: 5% !important;
+            }
+            .news-items-header{
+                font-size: 16px !important;
+                margin-bottom: 4% !important;
+            }
+            .news-item-link{
+                font-size: 16px !important;
             }
 
             .news-item .health-news-pic img {
                 /*margin: 0 auto 7px auto !important;*/
                 width: 100% !important;
             }
-
-            /*#quick-links {*/
-            /*padding: 0 !important;*/
-            /*}*/
-            /*table.row.news-item {*/
-            /*margin-bottom: 20px;*/
-            /*}*/
-            /*.footer {*/
-            /*padding: 11px 5px 7px 10px !important;*/
-            /*}*/
+            .health-news-heading{
+                margin-top: 20px;
+            }
+        . new-location-paragraph{
+            width: 72%;
+        }
+.footer-black{
+    margin-top: 4%;
+}
         }
 
         /* Small only  media-query*/
@@ -1459,10 +1513,10 @@
 
 <table border="0" cellpadding="0" cellspacing="0"  class="body no-margin no-padding" style="background-color: #ddebf7;width: 100%">
     <tr>
-        <td class="float-center " align="center" valign="top" style="padding-top: 55px">
+        <td class="float-center " align="center" valign="top" style="padding-top: 15px">
             <center>
                 <!--alert message-->
-                <table cellpadding="0" cellspacing="0" border="0" style="max-width: 600px;" id="atlanta" class="no-margin no-padding">
+                <table cellpadding="0" cellspacing="0" border="0" style="max-width: 600px;height: 100% !important;" id="atlanta" class="no-margin no-padding">
                     <tr>
                         <td>
                             <table cellpadding="0" cellspacing="0" border="0" class="float-center no-margin no-padding" align="center">
@@ -1481,7 +1535,7 @@
                                 </tbody>
                             </table>
                             <!--alert message-->
-                            <table cellpadding="0" cellspacing="0" border="0"align="center" class="container float-center no-margin no-padding"  style="margin-top: 15px">
+                            <table cellpadding="0" cellspacing="0" border="0"align="center" class="container float-center no-margin no-padding" bgcolor="#ffffff"  style="margin-top: 15px;background: #ffffff">
                                 <tbody>
                                 <tr>
                                     <td>
@@ -1495,7 +1549,8 @@
                                         </table>
                                         <!--red line-->
                                         <!--date-->
-                                        <table cellpadding="0" cellspacing="0" border="0" bgcolor=" #163f6f" class="spacer date no-padding no-margin" style="background-color: #163f6f;position: relative;width: 100% !important;">
+                                        <table cellpadding="0" cellspacing="0" border="0" bgcolor=" #163f6f" class="spacer date"
+                                               style="margin: 0;padding:0;background-color: #163f6f;position: relative;width: 100% !important;height:56px !important;display: inline-table">
                                             <tbody>
                                             <tr >
                                                 <td class="text-right"
@@ -1507,7 +1562,7 @@
                                         </table>
                                         <!--date-->
                                         <!--logo-->
-                                        <table cellpadding="0" cellspacing="0" border="0" class="row no-padding no-margin">
+                                        <table cellpadding="0" cellspacing="0" border="0" class="row no-padding no-margin" style="display: inline-table">
                                             <tbody>
                                             <tr style="height: 142px">
                                                 <th class="columns first last">
@@ -1526,7 +1581,7 @@
                                                                         <!--Patient Portal-->
                                                                         <td class="small-12 large-4 ">
                                                                             <table cellpadding="0" cellspacing="0" border="0" class="button large radius patient-portal no-margin no-padding"
-                                                                                   style="margin: 55px auto 0;">
+                                                                                   style="margin: 55px auto 0;background: none !important;">
                                                                                 <tr>
                                                                                     <td>
                                                                                         <table cellpadding="0" cellspacing="0" border="0" class="no-padding no-margin">
@@ -1540,14 +1595,14 @@
                                                                                                            class="radius patient-portal no-margin no-padding"
                                                                                                            style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0;mso-table-rspace:0;
                                                                                                border-spacing:0;font-family: Verdana, Geneva, sans-serif;color:#333333;border-collapse:collapse !important;
-                                                                                                 width: 150px;">
+                                                                                                 width: 100%;background: none">
                                                                                                         <tr>
                                                                                                             <td class="button contents-1 center-content text-center"
                                                                                                                 align="center"
                                                                                                                 style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;mso-table-lspace:0;mso-table-rspace:0;
-                                                                                                        padding:10px 4px 10px 8px;font-size:16px;font-family: Verdana, Geneva, sans-serif;color: #FFFFFF;
+                                                                                                        padding:10px 8px 10px 8px;font-size:16px;font-family: Verdana, Geneva, sans-serif;color: #FFFFFF;
                                                                                                         margin:0 auto !important;-webkit-border-radius: 3px;-moz-border-radius: 3px; border-radius: 3px;
-                                                                                                         text-decoration: none !important;">
+                                                                                                         text-decoration: none !important;text-align: center">
                                                                                                                 <a href="https://www.google.com/"
                                                                                                                    style="-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;color:#ffffff;font-size: 14px;padding:0;  display: inline-block;outline: none !important;text-decoration: none!important;">
                                                                                                                     <img src="http://167.99.82.193/images/user.png"
@@ -1582,7 +1637,7 @@
                                             <tbody>
                                             <tr>
                                                 <td class="small-12 large-8 columns todays-feauter " style="padding: 0 !important;">
-                                                    <table cellpadding="0" cellspacing="0" border="0" class="no-padding no-margin">
+                                                    <table cellpadding="0" cellspacing="0" border="0" style="display: inline-table" class="no-padding no-margin">
                                                         <tr>
                                                             <th>
                                                                 <!--today's feauter-->
@@ -1590,12 +1645,12 @@
                                                                     <tbody>
                                                                     <tr>
                                                                         <th class="reverse-elem">
-                                                                            <h4 class="todays-feauter-header reverse-second" style="font-size: 16px;line-height:1.2;
+                                                                            <h4 class="todays-feauter-header " style="font-size: 16px;line-height:1.2;
                                                                             color:#ffffff;background-color: #557ab1;padding: 17px 0 17px 21px;display: block;text-decoration: none!important;    Margin-bottom: 2.6%;margin-bottom: 6px">
                                                                                 <span class="todays" style="font-weight: bold;">today’s</span>
                                                                                 feature
                                                                             </h4>
-                                                                            <img class="reverse-first ortho-atlanta-pic"
+                                                                            <img class=" ortho-atlanta-pic"
                                                                                  src="http://167.99.82.193/images/atlanta.png"
                                                                                  alt="Ortho Atlanta" width="547" height="202">
                                                                         </th>
@@ -1605,88 +1660,107 @@
                                                                 </table>
                                                                 <!--today's feauter-->
                                                                 <!--new locationa-->
-                                                                <table cellpadding="0" cellspacing="0" border="0" class="row no-padding" style="margin-top: 17px !important;">
+                                                                <table border="0" cellpadding="0" cellspacing="0" class=" news-item container"  style="margin: 20px 0 0 0 ;padding:0 !important;width: 100%" align="center" >
                                                                     <tbody>
                                                                     <tr>
-                                                                        <td class="padding-35" style="padding: 0 16px">
-                                                                            <h5 style="color: #163f6f;text-transform: uppercase;font-size: 13px;font-weight: bold;display: inline-block;
-                                                                    text-decoration: none!important;">
-                                                                                new location at the
-                                                                                battery atlanta</h5>
-                                                                            <p style="color: #222b2a;font-size: 13px;line-height: 1.5;display: inline-block;text-decoration: none!important;text-align: left">
-                                                                                NOW OPEN! – OrthoAtlanta orthopedics and sports
-                                                                                medicine
-                                                                                specialists opened its newest office location at The
-                                                                                Battery Atlanta at SunTrust
-                                                                                Park, in Atlanta, Georgia. This office includes
-                                                                                orthopedics and sports medicine care, physical
-                                                                                medicine and
-                                                                                rehabilitation (PM&R) services, and on-site physical
-                                                                                therapy.
-                                                                            </p>
-                                                                            <p style="color: #222b2a;font-size: 13px;line-height: 1.5;display: inline-block;text-decoration: none!important;text-align: left;font-weight: 400">
-                                                                                OrthoAtlanta physicians have received specialized
-                                                                                training in orthopedic surgery services and
-                                                                                in sub-specialty areas within the field. Our
-                                                                                orthopedic doctors
-                                                                                can diagnose and treat even the rarest or most
-                                                                                complex conditions, and are supported
-                                                                                by a professional staff of assistants, therapists,
-                                                                                technicians and administrative personnel.
-                                                                            </p>
-                                                                            <p style="display: block">
-                                                                                <a href="https://www.google.com/"
-                                                                                   style="color:#1e39a2 !important;font-size: 13px;border-bottom-style:solid; border-bottom-width:1px;
+                                                                        <td >
+                                                                            <table class="row">
+                                                                                <tr>
+                                                                                    <td class="small-11 large-12 ">
+                                                                                        <table class="container" style="padding: 0 !important;margin: 0 !important;" align="center">
+                                                                                            <tr>
+                                                                                                <td style="  display: grid " class=" news-block" >
+                                                                                                    <h6 style="color: #163f6f;text-transform: uppercase;font-size: 13px;font-weight: bold;display: inline-block;
+                                                                    text-decoration: none!important; "
+                                                                                                        class="news-items-header ">
+                                                                                                        NEW LOCATION AT THE BATTERY ATLANTA
+                                                                                                        </h6>
+                                                                                                    <p class="news-item-paragraph new-location-paragraph  " style="color: #222b2a;font-size: 13px;display: inline-block;text-decoration: none!important;line-height: 1.5 ">
+                                                                                                        NOW OPEN! – OrthoAtlanta orthopedics and sports
+                                                                                                        medicine
+                                                                                                        specialists opened its newest office location at The
+                                                                                                        Battery Atlanta at SunTrust
+                                                                                                        Park, in Atlanta, Georgia. This office includes
+                                                                                                        orthopedics and sports medicine care, physical
+                                                                                                        medicine and
+                                                                                                        rehabilitation (PM&R) services, and on-site physical
+                                                                                                        therapy.
+
+                                                                                                    </p>
+                                                                                                    <p class="news-item-paragraph new-location-paragraph" style="color: #222b2a;font-size: 13px;line-height: 1.5;display: inline-block;text-decoration: none!important;">
+                                                                                                        OrthoAtlanta physicians have received specialized
+                                                                                                        training in orthopedic surgery services and
+                                                                                                        in sub-specialty areas within the field. Our
+                                                                                                        orthopedic doctors
+                                                                                                        can diagnose and treat even the rarest or most
+                                                                                                        complex conditions, and are supported
+                                                                                                        by a professional staff of assistants, therapists,
+                                                                                                        technicians and administrative personnel.
+                                                                                                    </p>
+                                                                                                    <p>
+                                                                                                        <a href="https://www.google.com/"
+                                                                                                           style="color:#1e39a2 !important;font-size: 13px;border-bottom-style:solid; border-bottom-width:1px;
                                                                             border-bottom-color:#1e39a2 ">
-                                                                                    <img src="http://167.99.82.193/images/double-right.png"
-                                                                                         alt="Right Arrow"
-                                                                                         style="display: inline;width: 9px !important;height: 10px !important;">
-                                                                                    Learn More </a>
-                                                                            </p>
+                                                                                                            <img src="http://167.99.82.193/images/double-right.png"
+                                                                                                                 alt="Right Arrow"
+                                                                                                                 style="display: inline;width: 9px !important;height: 10px !important;">
+                                                                                                            Learn More </a>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
                                                                         </td>
                                                                     </tr>
                                                                     </tbody>
                                                                 </table>
                                                                 <!--new locationa-->
                                                                 <!--open tennis-->
-                                                                <table cellpadding="0" cellspacing="0" border="0" class="row bbt-atlanta-open-tennis no-padding"
-                                                                       style="margin-top: 38px;margin-bottom: 60px;background: none">
+                                                                <table border="0" cellpadding="0" cellspacing="0" class=" news-item container"  style="margin: 20px 0 0 0 ;padding:0 !important;width: 100%" align="center" >
                                                                     <tbody>
                                                                     <tr>
-                                                                        <td class="small-10 large-7 padding-n"
-                                                                            style="padding: 0 16px">
-                                                                            <h5 style="color: #163f6f;text-transform: uppercase;font-size: 12px;font-weight: bold;display: inline-block;
-                                                                    text-decoration: none!important;">
-                                                                                BB&T Atlanta Open Tennis</h5>
-                                                                            <img src="http://167.99.82.193/images/tennis-pic.png"
-                                                                                 alt="Tennis players photo" width="275" height="183"
-                                                                                 style="display: none"
-                                                                                 class="tennis-players-mobile">
-                                                                            <p style="color: #222b2a;font-size: 13px;line-height: 1.5;display: inline-block;text-decoration: none!important;text-align: left;font-weight: 400">
-                                                                                OrthoAtlanta is proud to serve as
-                                                                                the official orthopedic and sports
-                                                                                medicine provider of the BB&T
-                                                                                Atlanta Open tennis tournament.
-                                                                                An ATP World Tour 250 event held
-                                                                                annually in Atlanta, Georgia, the
-                                                                                9-day tournament will be held in
-                                                                                Atlantic Station, Midtown, Atlanta
-                                                                                from July 21 - 29, 2018.
-                                                                            </p>
-                                                                            <p style="display: block">
-                                                                                <a href="https://www.google.com/"
-                                                                                   style="color:#1e39a2 !important;font-size: 13px;border-bottom-style:solid; border-bottom-width:1px;
+                                                                        <td >
+                                                                            <table class="row">
+                                                                                <tr>
+                                                                                    <td class="small-11 large-12 ">
+                                                                                        <table class="container" style="padding: 0 !important;margin: 0 !important;" align="center">
+                                                                                            <tr>
+                                                                                                <td style="display: table" class="order-box news-block" >
+
+                                                                                                    <h5 style="color:#163f6f;font-size: 14px;font-weight: bold;display: inline-block;text-decoration: none!important; "
+                                                                                                        class="news-items-header">
+                                                                                                        BB&T Atlanta Open Tennis </h5>
+                                                                                                    <img src="http://167.99.82.193/images/tennis-pic.png" alt="Tennis players"
+                                                                                                         style="width: 36%;height: 117px;float: right;margin-top: 2%;margin-bottom: 3%" class="open-tennis-pic">
+                                                                                                    <p class="news-item-paragraph" style="color: #222b2a;font-size: 13px;display: inline-block;text-decoration: none!important;width: 60%;line-height: 1.5 ">
+                                                                                                        OrthoAtlanta is proud to serve as
+                                                                                                        the official orthopedic and sports
+                                                                                                        medicine provider of the BB&T
+                                                                                                        Atlanta Open tennis tournament.
+                                                                                                        An ATP World Tour 250 event held
+                                                                                                        annually in Atlanta, Georgia, the
+                                                                                                        9-day tournament will be held in
+                                                                                                        Atlantic Station, Midtown, Atlanta
+                                                                                                        from July 21 - 29, 2018.
+                                                                                                    </p>
+
+                                                                                                    <p>
+                                                                                                        <a href="https://www.google.com/"
+                                                                                                           style="color:#1e39a2 !important;font-size: 13px;border-bottom-style:solid; border-bottom-width:1px;
                                                                             border-bottom-color:#1e39a2 ">
-                                                                                    <img src="http://167.99.82.193/images/double-right.png"
-                                                                                         alt="Right Arrow"
-                                                                                         style="display: inline;width: 9px !important;height: 10px !important;">
-                                                                                    Learn More </a>
-                                                                            </p>
-                                                                        </td>
-                                                                        <td class="small-12 large-5  columns last">
-                                                                            <img src="http://167.99.82.193/images/tennis-pic.png"
-                                                                                 alt="Tennis players photo" width="275" height="183"
-                                                                                 class="tennis-players-web">
+                                                                                                            <img src="http://167.99.82.193/images/double-right.png"
+                                                                                                                 alt="Right Arrow"
+                                                                                                                 style="display: inline;width: 9px !important;height: 10px !important;">
+                                                                                                            Learn More </a>
+                                                                                                    </p>
+
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
                                                                         </td>
                                                                     </tr>
                                                                     </tbody>
@@ -1717,17 +1791,17 @@
                                                                 <table cellpadding="0" cellspacing="0" border="0" class="no-margin no-padding">
                                                                     <tr>
                                                                         <td style="padding: 0 0 0 18px;height: 133px !important;" class="quick-links-list">
-                                                                            <p style="display: block;text-decoration: underline!important;color:#1e39a2;font-size: 13px ">
-                                                                                <a href="https://www.google.com/">Care
+                                                                            <p style="display: block;text-decoration: underline!important;font-size: 13px ">
+                                                                                <a href="https://www.google.com/" style="color: #1e39a2 !important;" >Care
                                                                                     Providers </a></p>
-                                                                            <p style="display: block;text-decoration: underline!important;;color:#1e39a2;font-size: 13px ">
-                                                                                <a href="https://www.google.com/">Request an
+                                                                            <p style="display: block;text-decoration: underline!important;font-size: 13px ">
+                                                                                <a href="https://www.google.com/" style="color: #1e39a2 !important;">Request an
                                                                                     Appointment </a></p>
-                                                                            <p style="display: block;text-decoration: underline!important;;color:#1e39a2;font-size: 13px ">
-                                                                                <a href="https://www.google.com/">Patient
+                                                                            <p style="display: block;text-decoration: underline!important;font-size: 13px ">
+                                                                                <a href="https://www.google.com/" style="color: #1e39a2 !important;">Patient
                                                                                     Education </a></p>
-                                                                            <p style="display: block;text-decoration: underline!important;;color:#1e39a2;font-size: 13px ">
-                                                                                <a href="https://www.google.com/">Preparing for Your
+                                                                            <p style="display: block;text-decoration: underline!important;font-size: 13px ">
+                                                                                <a href="https://www.google.com/" style="color: #1e39a2 !important;">Preparing for Your
                                                                                     Visit</a></p>
                                                                         </td>
                                                                     </tr>
@@ -1789,7 +1863,7 @@
                                             </tbody>
                                         </table>
                                         <!--health news-->
-                                        <table cellpadding="0" cellspacing="0" border="0" class="row no-margin no-padding" style="width: 100%">
+                                        <table cellpadding="0" cellspacing="0" border="0" class="row no-margin no-padding" style="width: 100%;display: inline-table">
                                             <tbody>
                                             <tr>
                                                 <th>
@@ -1803,97 +1877,126 @@
                                             </tbody>
                                         </table>
                                         <!--Cancer Care-->
-                                        <table cellpadding="0" cellspacing="0" border="0" class="row news-item padding-35" style="margin-top: 15px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" class=" news-item container"  style="margin: 20px 0 0 0 ;padding:0 !important;width: 100%;display: inline-table" align="center" >
                                             <tbody>
                                             <tr>
-                                                <td class="small-9 large-3 health-news-pic padding-35">
-                                                    <img src="http://167.99.82.193/images/health-pic-1.png" alt="Health news"
-                                                         width="180" height="134">
-                                                </td>
-                                                <td class="small-9 large-9 padding-35">
-                                                    <h6 style="color:#a30234;font-size: 14px;font-weight: bold;display: inline-block;text-decoration: none!important;">
-                                                        Cancer Care Twice as Costly in U.S. Versus Canada </h6>
-                                                    <p style="color: #222b2a;font-size: 12px;display: inline-block;text-decoration: none!important;text-align: left;font-weight: 400">
-                                                        FRIDAY, June 1, 2018 (HealthDay News) -- What a difference a border
-                                                        makes, when it comes to the cost of cancer care.
-                                                    </p>
-                                                    <p style="color: #222b2a;font-size: 12px;line-height: 1.2;display: inline-block;text-decoration: none!important;text-align: left;font-weight: 400">
-                                                        Common chemotherapy for advanced colorectal cancer costs twice as much
-                                                        in Washington state as it does a short walk across ...
-                                                    </p>
-                                                    <a href="https://www.google.com/"
-                                                       style="text-decoration: underline;font-size: 13px;display: inline-block;color:#1e39a2;">Read
-                                                        More</a>
+                                                <td >
+                                                    <table class="row">
+                                                        <tr>
+                                                            <td class="small-11 large-12 ">
+                                                                <table class="container" style="padding: 0 !important;margin: 0 !important;" align="center">
+                                                                    <tr>
+                                                                        <td style="display: table" class="order-box news-block" >
+                                                                            <img src="http://167.99.82.193/images/health-pic-1.png" alt="Health news"
+                                                                                 style="width: 25%;height: 134px;float: left;margin-right: 3%" class="news-item-pic order-box-second">
+                                                                            <h6 style="color:#a30234;font-size: 14px;font-weight: bold;display: inline-block;text-decoration: none!important; "
+                                                                                class="news-items-header order-box-first">
+                                                                                Cancer Care Twice as Costly in U.S. Versus Canada </h6>
+                                                                            <p class="news-item-paragraph  order-box-third" style="color: #222b2a;font-size: 12px;display: inline-block;text-decoration: none!important;width: 72% ">
+                                                                                FRIDAY, June 1, 2018 (HealthDay News) -- What a difference a border
+                                                                                makes, when it comes to the cost of cancer care.
+                                                                            </p>
+                                                                            <p class="news-item-paragraph order-box-fourth" style="color: #222b2a;font-size: 12px;line-height: 1.2;display: inline-block;text-decoration: none!important;width: 72%">
+                                                                                Common chemotherapy for advanced colorectal cancer costs twice as much
+                                                                                in Washington state as it does a short walk across ...
+                                                                            </p>
+                                                                            <p class="order-box-fifth">
+                                                                                <a href="https://www.google.com/" class="news-item-link" style="text-decoration: underline;font-size: 13px;display: inline;color:#1e39a2;">Read More</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
                                                 </td>
                                             </tr>
                                             </tbody>
                                         </table>
                                         <!--Cancer Care-->
                                         <!--Walk Briskly-->
-                                        <table cellpadding="0" cellspacing="0" border="0" class="row news-item no-margin no-padding" style="margin-top: 15px;">
+                                        <table border="0" cellpadding="0" cellspacing="0" class=" news-item container"  style="margin: 20px 0 0 0 ;padding:0 !important;width: 100%;display: inline-table" align="center" >
                                             <tbody>
                                             <tr>
-                                                <td class="small-9 large-3 health-news-pic padding-35">
-                                                    <img src="http://167.99.82.193/images/health-pic-2.png" alt="Health news"
-                                                         width="180" height="135">
-                                                </td>
-                                                <td class="small-9 large-9 padding-35 col-min-width-94">
-                                                    <h6 style="color:#a30234;font-size: 14px;font-weight: bold;display: inline-block;text-decoration: none!important;">
-                                                        Walk Briskly to a Longer Life
-                                                    </h6>
-                                                    <p style="color: #222b2a;font-size: 12px;display: inline-block;text-decoration: none!important;text-align: left;font-weight: 400">
-                                                        FRIDAY, June 1, 2018 (HealthDay News) -- You might want to pick
-                                                        up the pace when you
-                                                        head out for a stroll, suggests a new study that found that
-                                                        doing so may lengthen your life.
-                                                    </p>
-                                                    <p style="color: #222b2a;font-size: 12px;display: block;text-decoration: none!important;text-align: left;font-weight: 400">
-                                                        In fact, compared with a slow pace, walking at an average pac...
-                                                    </p>
-                                                    <a href="https://www.google.com/"
-                                                       style="text-decoration: underline;font-size: 13px;display: inline-block;color:#1e39a2;">
-                                                        Read More
-                                                    </a>
+                                                <td >
+                                                    <table class="row">
+                                                        <tr>
+                                                            <td class="small-11 large-12 ">
+                                                                <table class="container" style="padding: 0 !important;margin: 0 !important;" align="center">
+                                                                    <tr>
+                                                                        <td style="display: table" class="order-box news-block" >
+                                                                            <img src="http://167.99.82.193/images/health-pic-2.png" alt="Health news"
+                                                                                 style="width: 25%;height: 134px;float: left;margin-right: 3%" class="news-item-pic order-box-second">
+                                                                            <h6 style="color:#a30234;font-size: 14px;font-weight: bold;display: inline-block;text-decoration: none!important; "
+                                                                                class="news-items-header order-box-first">
+                                                                                Walk Briskly to a Longer Life
+                                                                            </h6>
+                                                                            <p class="news-item-paragraph order-box-third" style="color: #222b2a;font-size: 12px;display: inline-block;text-decoration: none!important;width: 72% ">
+                                                                                FRIDAY, June 1, 2018 (HealthDay News) -- You might want to pick
+                                                                                up the pace when you
+                                                                                head out for a stroll, suggests a new study that found that
+                                                                                doing so may lengthen your life.
+                                                                            </p>
+                                                                            <p class="news-item-paragraph order-box-fourth" style="color: #222b2a;font-size: 12px;line-height: 1.2;display: inline-block;text-decoration: none!important;width: 72%">
+                                                                                In fact, compared with a slow pace, walking at an average pac...
+                                                                            </p>
+                                                                            <p class="order-box-fifth">
+                                                                                <a href="https://www.google.com/" class="news-item-link" style="text-decoration: underline;font-size: 13px;display: inline;color:#1e39a2;">Read More</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
                                                 </td>
                                             </tr>
                                             </tbody>
                                         </table>
                                         <!--Walk Briskly-->
                                         <!--AI Better-->
-                                        <table cellpadding="0" cellspacing="0" border="0" class="row news-item no-padding" style="margin-top: 15px;margin-bottom: 33px">
+                                        <table border="0" cellpadding="0" cellspacing="0" class=" news-item container"  style="margin: 20px 0 0 0 ;padding:0 !important;width: 100%;display: inline-table" align="center" >
                                             <tbody>
                                             <tr>
-                                                <td class="small-9 large-3 health-news-pic padding-35">
-                                                    <img src="http://167.99.82.193/images/health-pic-3.png" alt="Health news"
-                                                         width="180" height="135">
-                                                </td>
-                                                <td class="small-9 large-9 padding-35">
-                                                    <h6 style="color:#a30234;font-size: 14px;font-weight: bold;display: inline-block;text-decoration: none!important;">
-                                                        AI Better Than Docs at Catching Skin Cancers </h6>
-                                                    <p style="color: #222b2a;font-size: 12px;display: inline-block;text-decoration: none!important;text-align: left;font-weight: 400">
-                                                        THURSDAY, May 31, 2018 (HealthDay News) -- A computer can
-                                                        beat even highly experienced dermatologists in spotting deadly
-                                                        melanomas, researchers report.
-                                                    </p>
-                                                    <p style="color: #222b2a;font-size: 12px;display: inline-block;text-decoration: none!important;text-align: left;font-weight: 400">
-                                                        The study is the latest to test the idea that "artificial
-                                                        intelligence" can improve med...
-                                                    </p>
-                                                    <a href="https://www.google.com/"
-                                                       style="text-decoration: underline;font-size: 13px;display: inline-block;color:#1e39a2; ">
-                                                        Read More
-                                                    </a>
+                                                <td >
+                                                    <table class="row">
+                                                        <tr>
+                                                            <td class="small-11 large-12 ">
+                                                                <table class="container" style="padding: 0 !important;margin: 0 !important;" align="center">
+                                                                    <tr>
+                                                                        <td style="display: table" class="order-box news-block" >
+                                                                            <img src="http://167.99.82.193/images/health-pic-3.png" alt="Health news"
+                                                                                 style="width: 25%;height: 134px;float: left;margin-right: 3%" class="news-item-pic order-box-second">
+                                                                            <h6 style="color:#a30234;font-size: 14px;font-weight: bold;display: inline-block;text-decoration: none!important; "
+                                                                                class="news-items-header order-box-first">
+                                                                                AI Better Than Docs at Catching Skin Cancers
+                                                                            </h6>
+                                                                            <p class="news-item-paragraph order-box-third" style="color: #222b2a;font-size: 12px;display: inline-block;text-decoration: none!important;width: 72% ">
+                                                                                THURSDAY, May 31, 2018 (HealthDay News) -- A computer can
+                                                                                beat even highly experienced dermatologists in spotting deadly
+                                                                                melanomas, researchers report.
+                                                                            </p>
+                                                                            <p class="news-item-paragraph order-box-fourth" style="color: #222b2a;font-size: 12px;line-height: 1.2;display: inline-block;text-decoration: none!important;width: 72%">
+                                                                                The study is the latest to test the idea that "artificial
+                                                                                intelligence" can improve med...
+                                                                            </p>
+                                                                            <p class="order-box-fifth">
+                                                                                <a href="https://www.google.com/" class="news-item-link" style="text-decoration: underline;font-size: 13px;display: inline;color:#1e39a2;">Read More</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
                                                 </td>
                                             </tr>
                                             </tbody>
                                         </table>
                                         <!--AI Better-->
                                         <!--footer-->
-                                        <table  cellpadding="0" cellspacing="0" border="0" class="row no-padding no-margin" style=" text-align:left;background-color:#2b3533;">
+                                        <table  cellpadding="0" cellspacing="0" border="0" class="row no-padding no-margin footer-black" style=" text-align:left;background-color:#2b3533;">
                                             <tbody>
                                             <tr>
-                                                <td class="small-10 large-12 col-min-width-94 footer text-left"
-                                                    style="padding: 18px 25px 16px 18px;text-align: left">
+                                                <td class="small-11 large-12  footer text-left"
+                                                    style="padding: 3% ;text-align: left">
                                                     <p style="color: #ffffff;font-size: 11px;line-height: 1.6;display: inline-block;text-decoration: none!important;text-align: left;font-weight: 400">
                                                         You're receiving this newsletter because you've
                                                         subscribed to the Ortho Atlanta Newsletter.
